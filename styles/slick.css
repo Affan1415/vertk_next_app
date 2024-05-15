@@ -1,0 +1,32 @@
+/*! purgecss start ignore */
+@import "slick-carousel/slick/slick.css";
+/*! purgecss end ignore*/
+.announcement {
+    font-family: "Poppins", sans-serif;
+    background-color: white;
+
+    padding: 30px;
+}
+
+.announcement.font{
+    font-family: "Poppins", sans-serif;
+    padding: 8px;
+}
+
+.announcement.black-bg {
+    font-family: "Poppins", sans-serif;
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    font-size:xx-large;
+    transform: rotate(-10deg);
+}
+
+.announcement.white-bg {
+    font-family: "Poppins", sans-serif;
+    background-color: white;
+    color: black;
+    font-weight: bold;
+    font-size:xx-large;
+    transform: rotate(8deg);
+}
