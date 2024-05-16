@@ -1,5 +1,6 @@
 /*! purgecss start ignore */
 @import "slick-carousel/slick/slick.css";
+
 /*! purgecss end ignore*/
 .announcement {
     font-family: "Poppins", sans-serif;
@@ -9,7 +10,7 @@
     font-size: 54px;
 }
 
-.announcement.font{
+.announcement.font {
     font-family: "Poppins", sans-serif;
     padding: 8px;
 }
@@ -30,4 +31,116 @@
     font-weight: bold;
     font: 54px;
     /* transform: rotate(8deg); */
+}
+
+/*<---------HEADER--------------->*/
+.bg-003049 {
+    background-color: #003049;
+    /* Set background color to #003049 */
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 30;
+    transition: all 0.3s;
+}
+
+.shadow-md {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.pt-0 {
+    padding-top: 0;
+    /* Adjust padding-top as needed */
+}
+
+.pt-4 {
+    padding-top: 1rem;
+    /* Adjust padding-top as needed */
+}
+
+.nav-bg {
+    background-color: #003049;
+    color: white;
+}
+
+.max-w-screen-xl {
+    max-width: 1280px;
+    /* Adjust max-width as needed */
+}
+
+.px-6 {
+    padding-left: 1.5rem;
+    /* Adjust padding-left as needed */
+    padding-right: 1.5rem;
+    /* Adjust padding-right as needed */
+}
+
+.sm\:px-8 {
+    padding-left: 2rem;
+    /* Adjust padding-left as needed */
+    padding-right: 2rem;
+    /* Adjust padding-right as needed */
+}
+
+.lg\:px-16 {
+    padding-left: 4rem;
+    /* Adjust padding-left as needed */
+    padding-right: 4rem;
+    /* Adjust padding-right as needed */
+}
+
+.mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.grid {
+    display: grid;
+}
+
+.grid-flow-col {
+    grid-auto-flow: column;
+}
+
+.py-3 {
+    padding-top: 0.75rem;
+    /* Adjust padding-top as needed */
+    padding-bottom: 0.75rem;
+    /* Adjust padding-bottom as needed */
+}
+
+.sm\:py-4 {
+    padding-top: 1rem;
+    /* Adjust padding-top as needed */
+    padding-bottom: 1rem;
+    /* Adjust padding-bottom as needed */
+}
+
+.text-white-logo {
+    font-size: 30px;
+    color: #ffffff;
+    /* White color */
+}
+
+.bg-003049 {
+    background-color: #003049;
+}
+
+.text-white {
+    color: #ffffff;
+}
+
+.text-black {
+    color: #000000;
+}
+
+.text-orange-500 {
+    color: #ffb208;
+}
+
+.hover\:text-black:hover {
+    color: #000000;
 }
