@@ -35,7 +35,8 @@
 
 /*<---------HEADER--------------->*/
 .bg-003049 {
-    background-color: #003049;
+    background-color: #ffffff;
+    /* background-color: #003049; */
     /* Set background color to #003049 */
 }
 
@@ -62,7 +63,8 @@
 }
 
 .nav-bg {
-    background-color: #003049;
+    background-color: #ffffff;
+    /* background-color: #003049; */
     color: white;
 }
 
@@ -121,16 +123,17 @@
 
 .text-white-logo {
     font-size: 30px;
-    color: #ffffff;
+    color: #000000;
     /* White color */
 }
 
 .bg-003049 {
-    background-color: #003049;
+    background-color: #ffffff;
 }
 
 .text-white {
-    color: #ffffff;
+    color: #000000;
+    /* color: #ffffff; */
 }
 
 .text-black {
@@ -138,9 +141,31 @@
 }
 
 .text-orange-500 {
-    color: #ffb208;
+    color: #003049;
 }
 
 .hover\:text-black:hover {
     color: #000000;
+}
+
+/* styles.css */
+
+.button-outline {
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    padding: 8px 20px;
+    border: 2px solid #003049;
+    color: #003049;
+    background-color: #ffffff;
+    outline: none;
+    border-radius: 30px;
+    text-transform: capitalize;
+    transition: all 0.3s ease;
+}
+
+.button-outline:hover {
+    background-color: #003049;
+    color: #ffffff;
+    border-color: #003049;
+    box-shadow: 0 4px 6px rgba(0, 48, 73, 0.1);
 }

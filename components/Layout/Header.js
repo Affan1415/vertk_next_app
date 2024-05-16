@@ -83,10 +83,7 @@ const Header = () => {
             </li>
           </ul>
           <div className="col-start-10 col-end-12 font-medium flex justify-end items-center">
-            <Link href="/">
-              <a className="text-white mx-2 sm:mx-4 capitalize tracking-wide hover:text-orange-500 transition-all">Sign In</a>
-            </Link>
-            <ButtonOutline bgColor="#ffb208" textColor="#ffffff">Sign Up</ButtonOutline>
+            <ButtonOutline>Contact Us</ButtonOutline>
           </div>
         </nav>
       </header>
