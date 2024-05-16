@@ -5,7 +5,8 @@
     font-family: "Poppins", sans-serif;
     background-color: white;
 
-    padding: 30px;
+    padding: 70px;
+    font-size: 54px;
 }
 
 .announcement.font{
@@ -18,8 +19,8 @@
     background-color: black;
     color: white;
     font-weight: bold;
-    font-size:xx-large;
-    transform: rotate(-10deg);
+    font-size: 54px;
+    /* transform: rotate(-10deg); */
 }
 
 .announcement.white-bg {
@@ -27,6 +28,6 @@
     background-color: white;
     color: black;
     font-weight: bold;
-    font-size:xx-large;
-    transform: rotate(8deg);
+    font: 54px;
+    /* transform: rotate(8deg); */
 }
