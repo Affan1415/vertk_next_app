@@ -1,7 +1,11 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-
+import Navbar from "@/components/Navbar"
+import Heroglobe from "@/components/HeroSection-globe"
+import Herogemini from "@/components/hero-gemini"
+import FlipWordsDemo from "@/components/flipwords-component"
+import StickyScrollRevealDemo from "@/components/stickyscroll"
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -17,6 +21,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
+        <Navbar/>
+        {/* <Heroglobe/> */}
+        <Herogemini/>
+        <FlipWordsDemo/>
+        <StickyScrollRevealDemo/>
         {children}
         </body>
     </html>
