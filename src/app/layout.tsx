@@ -6,6 +6,10 @@ import Heroglobe from "@/components/HeroSection-globe"
 import Herogemini from "@/components/hero-gemini"
 import FlipWordsDemo from "@/components/flipwords-component"
 import StickyScrollRevealDemo from "@/components/stickyscroll"
+import {InfiniteMovingCardsDemo} from "@/components/testimonials"
+
+
+
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -26,7 +30,9 @@ export default function RootLayout({
         <Herogemini/>
         <FlipWordsDemo/>
         <StickyScrollRevealDemo/>
+        <InfiniteMovingCardsDemo/>
         {children}
+        
         </body>
     </html>
   );
