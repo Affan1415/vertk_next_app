@@ -3,6 +3,7 @@ import { cn } from "@/utils/cn";
 import { motion, MotionValue } from "framer-motion";
 import React from "react";
 import { TypewriterEffectSmooth } from "./typewriter-effect";
+import { LampContainer } from "./lamp";
 
 const transition = {
     duration: 0,
@@ -45,7 +46,10 @@ export const GoogleGeminiEffect = ({
 
     return (
         <div className={cn("sticky top-80", className)}>
-
+            {/* <div className="flex justify-center items-center h-screen"> */}
+            <div className="text-9xl font-bold text-center text-blue-500">
+                Vertk
+            </div>
             <div >
                 <TypewriterEffectSmooth words={words} />
             </div>

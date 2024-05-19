@@ -7,7 +7,8 @@ import Herogemini from "@/components/hero-gemini"
 import FlipWordsDemo from "@/components/flipwords-component"
 import StickyScrollRevealDemo from "@/components/stickyscroll"
 import {InfiniteMovingCardsDemo} from "@/components/testimonials"
-
+import { LampDemo } from "@/components/lamp-component";
+import {SignupFormDemo} from "@/components/contact-form"
 
 
 const inter = Inter({ subsets: ["latin"] });
@@ -31,6 +32,8 @@ export default function RootLayout({
         <FlipWordsDemo/>
         <StickyScrollRevealDemo/>
         <InfiniteMovingCardsDemo/>
+        <LampDemo/>
+        <SignupFormDemo/>
         {children}
         
         </body>

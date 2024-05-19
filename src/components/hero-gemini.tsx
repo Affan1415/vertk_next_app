@@ -2,6 +2,8 @@
 import { useScroll, useTransform } from "framer-motion";
 import React from "react";
 import { GoogleGeminiEffect } from "./ui/google-gemini-effect";
+import { TypewriterEffectSmooth } from "@/components/ui/typewriter-effect";
+
 
 export default function GoogleGeminiEffectDemo() {
     const ref = React.useRef(null);
@@ -15,7 +17,28 @@ export default function GoogleGeminiEffectDemo() {
     const pathLengthThird = useTransform(scrollYProgress, [0, 0.8], [0.1, 1.2]);
     const pathLengthFourth = useTransform(scrollYProgress, [0, 0.8], [0.05, 1.2]);
     const pathLengthFifth = useTransform(scrollYProgress, [0, 0.8], [0, 1.2]);
-
+    const words = [
+        {
+            text: "....................",
+            className: "text-black dark:text-black",
+        },
+        {
+            text: "Transforming",
+        },
+        {
+            text: "ideas",
+        },
+        {
+            text: "into",
+        },
+        {
+            text: "Digital",
+        },
+        {
+            text: "Realities.",
+            className: "text-blue-500 dark:text-blue-500",
+        },
+    ];
     return (
         <div
             className="h-[400vh] bg-black w-full dark:border dark:border-white/[0.1] rounded-md relative pt-40 overflow-clip"
