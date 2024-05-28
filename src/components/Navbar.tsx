@@ -13,7 +13,7 @@ import {
 } from "@nextui-org/react";
 import { AcmeLogo } from "./Logo";
 
-import{MovingBorderDemo} from "./moving-border-button-component"
+import { MovingBorderDemo } from "./moving-border-button-component"
 
 export default function App() {
     const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
@@ -63,7 +63,12 @@ export default function App() {
             </NavbarContent>
             <NavbarContent justify="end">
                 <NavbarItem>
-                    <MovingBorderDemo/>
+                    <button className="p-[3px] relative">
+                        <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg" />
+                        <div className="px-8 py-2  bg-black rounded-[6px]  relative group transition duration-200 text-white hover:bg-transparent">
+                            Contact Us
+                        </div>
+                    </button>
                 </NavbarItem>
             </NavbarContent>
             <NavbarMenu>

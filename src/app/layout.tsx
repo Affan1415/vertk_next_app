@@ -14,6 +14,7 @@ import SpotlightPreview from "@/components/Spotlight-component"
 import { NextUIProvider } from "@nextui-org/system";
 import {Divider} from "@nextui-org/divider";
 import Slider from '../components/Slider';
+import {CardHoverEffectDemo} from "@/components/service-cards"
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -37,8 +38,10 @@ export default function RootLayout({
           <SpotlightPreview />
           <Divider className="my-6" />
           <Slider speed={35} height={50} pauseOnHover={true} />
+          <Divider className="my-6" />
           {/* <FlipWordsDemo /> */}
-          <StickyScrollRevealDemo />
+          <CardHoverEffectDemo/>
+          {/* <StickyScrollRevealDemo /> */}
           <InfiniteMovingCardsDemo />
           <LampDemo />
           <Divider className="my-6" />
