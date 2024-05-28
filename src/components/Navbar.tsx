@@ -1,40 +1,87 @@
 "use client";
 import React, { useState } from "react";
-import { HoveredLink, Menu, MenuItem, ProductItem } from "./ui/navbar-menu";
-import { cn } from "@/utils/cn";
+import {
+    Navbar,
+    NavbarBrand,
+    NavbarContent,
+    NavbarItem,
+    NavbarMenuToggle,
+    NavbarMenu,
+    NavbarMenuItem,
+    Link,
+    Button,
+} from "@nextui-org/react";
+import { AcmeLogo } from "./Logo";
 
-export default function Navbardemo() {
-    return (
-        <div className="relative w-full flex items-center justify-center">
-            <Navbar className="top-2" />
-        </div>
-    );
-}
+import{MovingBorderDemo} from "./moving-border-button-component"
 
-function Navbar({ className }: { className?: string }) {
-    const [active, setActive] = useState<string | null>(null);
+export default function App() {
+    const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
+
+    const menuItems: string[] = [
+        "Profile",
+        "Dashboard",
+        "Activity",
+        "Analytics",
+        "System",
+        "Deployments",
+        "My Settings",
+        "Team Settings",
+        "Help & Feedback",
+        "Log Out",
+    ];
+
     return (
-        <div
-            className={cn("fixed top-10 inset-x-10 max-w-2xl mx-auto z-50", className)}
-        >
-            <Menu setActive={setActive}>
-                <MenuItem setActive={setActive} active={active} item="Services">
-                    <div className="flex flex-col space-y-4 text-sm">
-                        <HoveredLink href="/web-dev">Web Development</HoveredLink>
-                        <HoveredLink href="/interface-design">Interface Design</HoveredLink>
-                        <HoveredLink href="/seo">Search Engine Optimization</HoveredLink>
-                        <HoveredLink href="/branding">Branding</HoveredLink>
-                    </div>
-                </MenuItem>
-                <MenuItem setActive={setActive} active={active} item="Pricing">
-                    <div className="flex flex-col space-y-4 text-sm">
-                        <HoveredLink href="/hobby">Hobby</HoveredLink>
-                        <HoveredLink href="/individual">Individual</HoveredLink>
-                        <HoveredLink href="/team">Team</HoveredLink>
-                        <HoveredLink href="/enterprise">Enterprise</HoveredLink>
-                    </div>
-                </MenuItem>
-            </Menu>
-        </div>
+        <Navbar onMenuOpenChange={setIsMenuOpen} className="navbar-transparent">
+            <NavbarContent>
+                <NavbarMenuToggle
+                    aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+                    className="sm:hidden"
+                />
+                <NavbarBrand>
+                    <AcmeLogo />
+                    <p className="font-bold text-inherit">Vertk</p>
+                </NavbarBrand>
+            </NavbarContent>
+
+            <NavbarContent className="hidden sm:flex gap-4" justify="center">
+                <NavbarItem>
+                    <Link color="foreground" href="#">
+                        Features
+                    </Link>
+                </NavbarItem>
+                <NavbarItem isActive>
+                    <Link href="#" aria-current="page">
+                        Customers
+                    </Link>
+                </NavbarItem>
+                <NavbarItem>
+                    <Link color="foreground" href="#">
+                        Integrations
+                    </Link>
+                </NavbarItem>
+            </NavbarContent>
+            <NavbarContent justify="end">
+                <NavbarItem>
+                    <MovingBorderDemo/>
+                </NavbarItem>
+            </NavbarContent>
+            <NavbarMenu>
+                {menuItems.map((item, index) => (
+                    <NavbarMenuItem key={`${item}-${index}`}>
+                        <Link
+                            color={
+                                index === 2 ? "primary" : index === menuItems.length - 1 ? "danger" : "foreground"
+                            }
+                            className="w-full"
+                            href="#"
+                            size="lg"
+                        >
+                            {item}
+                        </Link>
+                    </NavbarMenuItem>
+                ))}
+            </NavbarMenu>
+        </Navbar>
     );
 }

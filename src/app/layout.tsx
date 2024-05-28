@@ -6,10 +6,14 @@ import Heroglobe from "@/components/HeroSection-globe"
 import Herogemini from "@/components/hero-gemini"
 import FlipWordsDemo from "@/components/flipwords-component"
 import StickyScrollRevealDemo from "@/components/stickyscroll"
-import {InfiniteMovingCardsDemo} from "@/components/testimonials"
+import { InfiniteMovingCardsDemo } from "@/components/testimonials"
 import { LampDemo } from "@/components/lamp-component";
-import {SignupFormDemo} from "@/components/contact-form"
+import { SignupFormDemo } from "@/components/contact-form"
 import Footer from "@/components/Footer";
+import SpotlightPreview from "@/components/Spotlight-component"
+import { NextUIProvider } from "@nextui-org/system";
+import {Divider} from "@nextui-org/divider";
+import Slider from '../components/Slider';
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -26,17 +30,24 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <Navbar/>
-        {/* <Heroglobe/> */}
-        <Herogemini/>
-        <FlipWordsDemo/>
-        <StickyScrollRevealDemo/>
-        <InfiniteMovingCardsDemo/>
-        <LampDemo/>
-        <SignupFormDemo/>
-        {children}
-        <Footer />
-        </body>
+        <NextUIProvider>
+          <Navbar />
+          {/* <Heroglobe/> */}
+          {/* <Herogemini/> */}
+          <SpotlightPreview />
+          <Divider className="my-6" />
+          <Slider speed={35} height={50} pauseOnHover={true} />
+          {/* <FlipWordsDemo /> */}
+          <StickyScrollRevealDemo />
+          <InfiniteMovingCardsDemo />
+          <LampDemo />
+          <Divider className="my-6" />
+          <SignupFormDemo />
+          <Divider className="my-6" />
+          {children}
+          <Footer />
+        </NextUIProvider>
+      </body>
     </html>
   );
 }

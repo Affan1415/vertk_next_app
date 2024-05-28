@@ -16,7 +16,7 @@
   }
 }
 
-body {
+/* body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
       to bottom,
@@ -24,6 +24,18 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+} */
+
+/* globals.css */
+.navbar-transparent {
+  background-color: transparent !important;
+}
+
+body {
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
 }
 
 @layer utilities {
@@ -48,3 +60,58 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background-color: var(--blue-600); /* Set color of the scrollbar thumb on hover */
 }
+
+/* styles/globals.css */
+
+/* Slider styles */
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.slider-container {
+  overflow: hidden;
+  padding: 60px 0;
+  background: #f4f4f4;
+  white-space: nowrap;
+  position: relative;
+}
+
+.slider-container:before,
+.slider-container:after {
+  position: absolute;
+  top: 0;
+  width: 250px;
+  height: 100%;
+  content: "";
+  z-index: 2;
+}
+
+.slider-container:before {
+  left: 0;
+  background: linear-gradient(to left, rgba(244, 244, 244, 0), #f4f4f4);
+}
+
+.slider-container:after {
+  right: 0;
+  background: linear-gradient(to right, rgba(244, 244, 244, 0), #f4f4f4);
+}
+
+.slider-track {
+  display: inline-block;
+  animation: slide infinite linear;
+}
+
+.slider-track div {
+  display: inline-block;
+  margin: 0 40px;
+}
+
+.slider-container:hover .slider-track {
+  animation-play-state: paused;
+}
+
