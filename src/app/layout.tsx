@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar"
-import Heroglobe from "@/components/HeroSection-globe"
 import Herogemini from "@/components/hero-gemini"
 import FlipWordsDemo from "@/components/flipwords-component"
 import StickyScrollRevealDemo from "@/components/stickyscroll"
