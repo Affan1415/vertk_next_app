@@ -1,52 +1,59 @@
-"use client";
+"use client"
+import React, { useState } from "react";
+import Marquee from "react-fast-marquee";
+import { CardBody, CardContainer, CardItem } from "./ui/3d-card";
+import Image from "next/image";
+import Link from "next/link";
+import { Divider } from "@nextui-org/divider";
 
-import React, { useEffect, useState } from "react";
-import { InfiniteMovingCards } from "./ui/infinite-moving-cards";
-
-export function InfiniteMovingCardsDemo() {
-    return (
-        <div className="h-[40rem] rounded-md flex flex-col antialiased bg-f4f4f4 dark:bg-black dark:bg-grid-white/[0.05] items-center justify-center relative overflow-hidden">
-                <div className="text-4xl text-black text-center">
-                    Testimonials
-                </div>
-
-            <InfiniteMovingCards
-                items={testimonials}
-                direction="right"
-                speed="normal"
-            />
-        </div>
-    );
+interface CardContent {
+    title: string;
+    description: string;
+    image: string;
+    link: string;
+    linkText: string;
 }
 
-const testimonials = [
-    {
-        quote:
-            "It was the best of times, it was the worst of times, it was the age of wisdom, it was the age of foolishness, it was the epoch of belief, it was the epoch of incredulity, it was the season of Light, it was the season of Darkness, it was the spring of hope, it was the winter of despair.",
-        name: "Charles Dickens",
-        title: "A Tale of Two Cities",
-    },
-    {
-        quote:
-            "To be, or not to be, that is the question: Whether 'tis nobler in the mind to suffer The slings and arrows of outrageous fortune, Or to take Arms against a Sea of troubles, And by opposing end them: to die, to sleep.",
-        name: "William Shakespeare",
-        title: "Hamlet",
-    },
-    {
-        quote: "All that we see or seem is but a dream within a dream.",
-        name: "Edgar Allan Poe",
-        title: "A Dream Within a Dream",
-    },
-    {
-        quote:
-            "It is a truth universally acknowledged, that a single man in possession of a good fortune, must be in want of a wife.",
-        name: "Jane Austen",
-        title: "Pride and Prejudice",
-    },
-    {
-        quote:
-            "Call me Ishmael. Some years ago—never mind how long precisely—having little or no money in my purse, and nothing particular to interest me on shore, I thought I would sail about a little and see the watery part of the world.",
-        name: "Herman Melville",
-        title: "Moby-Dick",
-    },
-];
+interface ThreeDCardProps {
+    content: CardContent[];
+}
+
+const ThreeDCardDemo: React.FC<ThreeDCardProps> = ({ content }) => {
+    const [isPaused, setIsPaused] = useState(false);
+
+    return (
+        <div style={{ padding: "20px 0" }}>
+            <div style={{ textAlign: 'center', backgroundColor: 'black', color: 'white', padding: '20px' }}>
+                <h1 style={{ fontSize: '3rem', fontWeight: 'bold' }}>Our success stories</h1>
+            </div>
+
+            <Marquee speed={100} direction="left" pauseOnHover={true}>
+                {content.map((card, index) => (
+                    <div key={index} style={{ marginRight: '10px' }}>
+                        <CardContainer className="inter-var">
+                            <CardBody className="bg-black relative group/card text-white border-black/[0.1] w-auto sm:w-[30rem] h-auto rounded-xl p-6 border">
+                                <CardItem translateZ="50" className="text-xl font-bold">
+                                    {card.title}
+                                </CardItem>
+                                <CardItem as="p" translateZ="60" className="text-sm max-w-sm mt-2">
+                                    {card.description}
+                                </CardItem>
+                                <CardItem translateZ="100" className="w-full mt-4">
+                                    <Image src={card.image} height="1000" width="1000" className="h-60 w-full object-cover rounded-xl" alt="thumbnail" />
+                                </CardItem>
+                                <div className="flex justify-end mt-20">
+                                    <CardItem as={Link} href={card.link} target="__blank" className="px-4 py-2 rounded-xl text-xs font-normal">
+                                        {card.linkText}
+                                    </CardItem>
+                                </div>
+                            </CardBody>
+                        </CardContainer>
+                        <Divider className="flex h-5" orientation="vertical" />
+                    </div>
+                ))}
+            </Marquee>
+        </div>
+    );
+};
+
+export default ThreeDCardDemo;

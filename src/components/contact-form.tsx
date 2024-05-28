@@ -17,8 +17,8 @@ export function SignupFormDemo() {
         console.log("Form submitted");
     };
     return (
-        <WavyBackground className="max-w-4xl mx-auto pb-40">
-        <div className=" max-w-md w-full mx-auto rounded-none md:rounded-2xl p-4 md:p-8 shadow-input bg-black dark:bg-black">
+        <div className=" max-w-md w-full mx-auto">
+        <BackgroundGradient className=" rounded-none md:rounded-2xl p-4 md:p-8 shadow-input bg-black dark:bg-black">
 
                 <h2 className="font-bold text-xl text-white dark:text-neutral-200">
                     Welcome to <span className="text-7xl font-bold text-blue-500">Vertk</span>
@@ -27,7 +27,6 @@ export function SignupFormDemo() {
                     Login to aceternity if you can because we don&apos;t have a login flow
                     yet
                 </p>
-
                 <form className="my-8 bg-black" onSubmit={handleSubmit}>
                     <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-2 mb-4">
                         <LabelInputContainer>
@@ -64,8 +63,8 @@ export function SignupFormDemo() {
                     </button>
 
                 </form>
+                    </BackgroundGradient>
         </div>
-            </WavyBackground>
     );
 }
 
