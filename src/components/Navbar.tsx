@@ -19,16 +19,9 @@ export default function App() {
     const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
 
     const menuItems: string[] = [
-        "Profile",
-        "Dashboard",
-        "Activity",
-        "Analytics",
-        "System",
-        "Deployments",
-        "My Settings",
-        "Team Settings",
-        "Help & Feedback",
-        "Log Out",
+        "Home",
+        "Services",
+        "About Us",
     ];
 
     return (
@@ -40,35 +33,33 @@ export default function App() {
                 />
                 <NavbarBrand>
                     <AcmeLogo />
-                    <p className="font-bold text-inherit">Vertk</p>
+                    {/* <p className="font-bold text-inherit">Vertk</p> */}
                 </NavbarBrand>
             </NavbarContent>
 
             <NavbarContent className="hidden sm:flex gap-4" justify="center">
                 <NavbarItem>
                     <Link color="foreground" href="#">
-                        Features
+                        Home
                     </Link>
                 </NavbarItem>
                 <NavbarItem isActive>
                     <Link href="#" aria-current="page">
-                        Customers
+                        Services
                     </Link>
                 </NavbarItem>
                 <NavbarItem>
                     <Link color="foreground" href="#">
-                        Integrations
+                        About Us
                     </Link>
                 </NavbarItem>
             </NavbarContent>
             <NavbarContent justify="end">
                 <NavbarItem>
-                    <button className="p-[3px] relative">
-                        <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg" />
-                        <div className="px-8 py-2  bg-black rounded-[6px]  relative group transition duration-200 text-white hover:bg-transparent">
-                            Contact Us
-                        </div>
+                    <button className="px-8 py-2 rounded-full bg-gradient-to-b from-[#003049] to-[#001F30] text-white focus:ring-2 focus:ring-blue-400 hover:shadow-xl transition duration-200">
+                        Contact Us
                     </button>
+
                 </NavbarItem>
             </NavbarContent>
             <NavbarMenu>

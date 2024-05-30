@@ -1,5 +1,6 @@
 "use client"
 import React from 'react';
+import { AcmeLogo } from "./Logo";
 
 const Footer: React.FC = () => {
     return (
@@ -8,14 +9,10 @@ const Footer: React.FC = () => {
                 <div className="md:flex md:justify-between">
                     <div className="mb-6 md:mb-0">
                         <a href="https://flowbite.com/" className="flex items-center">
-                            <img
-                                src="https://flowbite.com/docs/images/logo.svg"
-                                className="h-8 me-3"
-                                alt="FlowBite Logo"
-                            />
-                            <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
+                            <AcmeLogo/>
+                            {/* <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
                                 Vertk
-                            </span>
+                            </span> */}
                         </a>
                     </div>
                     <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
@@ -81,9 +78,9 @@ const Footer: React.FC = () => {
                 <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
                 <div className="sm:flex sm:items-center sm:justify-between">
                     <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">
-                        © 2023{' '}
+                        © 2024{' '}
                         <a href="https://flowbite.com/" className="hover:underline">
-                            Flowbite™
+                            Vertk™
                         </a>
                         . All Rights Reserved.
                     </span>
