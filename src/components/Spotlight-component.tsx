@@ -1,6 +1,8 @@
+"use client"
 import React from "react";
 import { cn } from "@/utils/cn";
 import { Spotlight } from "./ui/Spotlight";
+import { BackgroundBeams } from "./ui/background-beams";
 
 const SpotlightPreview: React.FC = () => {
     const menuItems: string[] = [
@@ -33,6 +35,7 @@ const SpotlightPreview: React.FC = () => {
 
                 </div>
             </div>
+            <BackgroundBeams />
         </div>
     );
 }
