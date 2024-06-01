@@ -15,6 +15,7 @@ import {Divider} from "@nextui-org/divider";
 import Slider from '../components/Slider';
 import {CardHoverEffectDemo} from "@/components/service-cards"
 import { BentoGridThirdDemo} from "@/components/blogs"
+import AboutUs from "@/components/about-us";
 
 const inter = Inter({ subsets: ["latin"] });
 const content = [
@@ -89,6 +90,7 @@ export default function RootLayout({
           {/* <StickyScrollRevealDemo /> */}
           {/* <InfiniteMovingCardsDemo /> */}
           {/* <LampDemo /> */}
+          <AboutUs/>
           <Divider className="my-6" />
           <SignupFormDemo />
           <Divider className="my-6" />
