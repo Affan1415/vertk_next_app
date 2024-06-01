@@ -1,49 +1,29 @@
+"use client"
 import React from 'react';
+import Marquee from 'react-fast-marquee';
 import Image from 'next/image';
 
-interface SliderProps {
-    speed: number; // speed in seconds
-    height: number; // height of the logos
-    pauseOnHover?: boolean; // pause on hover
-}
+const logos = [
+    '/logos/3m.svg',
+    '/logos/barstool-store.svg',
+    '/logos/budweiser.svg',
+    '/logos/buzzfeed.svg',
+    '/logos/forbes.svg',
+    '/logos/macys.svg',
+    '/logos/menshealth.svg',
+    '/logos/mrbeast.svg',
+];
 
-const Slider: React.FC<SliderProps> = ({ speed, height, pauseOnHover = true }) => {
-    const logos = [
-        '/logos/3m.svg',
-        '/logos/barstool-store.svg',
-        '/logos/budweiser.svg',
-        '/logos/buzzfeed.svg',
-        '/logos/forbes.svg',
-        '/logos/macys.svg',
-        '/logos/menshealth.svg',
-        '/logos/mrbeast.svg',
-    ];
-
-    const slideStyle = {
-        animationDuration: `${speed}s`,
-    };
-
+const Slider = () => {
     return (
-        <div className="slider-container">
-            <div className="slider-track" style={slideStyle}>
+        <div className="py-8">
+            <Marquee speed={60} gradient={false} pauseOnHover={true}>
                 {logos.map((logo, index) => (
-                    <div key={index} style={{ height: `${height}px`, width: 'auto' }}>
-                        <Image src={logo} alt="logo" height={height} width={height * 2} />
+                    <div key={index} className="mx-16">
+                        <Image src={logo} alt={`Logo ${index}`} width={120} height={120} />
                     </div>
                 ))}
-                {logos.map((logo, index) => (
-                    <div key={index + logos.length} style={{ height: `${height}px`, width: 'auto' }}>
-                        <Image src={logo} alt="logo" height={height} width={height * 2} />
-                    </div>
-                ))}
-            </div>
-            {pauseOnHover && (
-                <style>{`
-          .slider-container:hover .slider-track {
-            animation-play-state: paused;
-          }
-        `}</style>
-            )}
+            </Marquee>
         </div>
     );
 };

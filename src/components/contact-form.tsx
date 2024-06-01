@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import CalendlyInlineWidget from './ui/CalendlyInlineWidget';
 import { BackgroundGradient } from "./ui/background-gradient";
 import { Label } from "./ui/label";
 import { Input } from "./ui/input";
@@ -18,7 +19,7 @@ export function SignupFormDemo() {
     };
     return (
         <div className=" max-w-md w-full mx-auto">
-        <BackgroundGradient className=" rounded-none md:rounded-2xl p-4 md:p-8 shadow-input bg-black dark:bg-black">
+            <BackgroundGradient className=" rounded-none md:rounded-2xl p-4 md:p-8 shadow-input bg-black dark:bg-black">
 
                 <h2 className="font-bold text-xl text-white dark:text-neutral-200">
                     Welcome to <span className="text-7xl font-bold text-blue-500">Vertk</span>
@@ -63,7 +64,10 @@ export function SignupFormDemo() {
                     </button>
 
                 </form>
-                    </BackgroundGradient>
+            </BackgroundGradient>
+
+            {/* Calendly inline widget */}
+            <CalendlyInlineWidget />
         </div>
     );
 }

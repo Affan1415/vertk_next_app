@@ -37,28 +37,31 @@ export default function App() {
                 </NavbarBrand>
             </NavbarContent>
 
-            <NavbarContent className="hidden sm:flex gap-4" justify="center">
-                <NavbarItem>
+            <NavbarContent className="hidden sm:flex" justify="center">
+                <NavbarItem className="mx-5">
                     <Link color="foreground" href="#">
                         Home
                     </Link>
                 </NavbarItem>
-                <NavbarItem isActive>
-                    <Link href="#" aria-current="page">
+                <NavbarItem className="mx-5">
+                    <Link color="foreground" href="#">
                         Services
                     </Link>
                 </NavbarItem>
-                <NavbarItem>
+                <NavbarItem className="mx-5">
                     <Link color="foreground" href="#">
                         About Us
                     </Link>
                 </NavbarItem>
             </NavbarContent>
+
+
             <NavbarContent justify="end">
                 <NavbarItem>
-                    <button className="px-8 py-2 rounded-full bg-gradient-to-b from-[#003049] to-[#001F30] text-white focus:ring-2 focus:ring-blue-400 hover:shadow-xl transition duration-200">
+                    <button className="shadow-[inset_0_0_0_2px_#003049] text-black px-6 py-2 rounded-full tracking-widest uppercase font-bold bg-transparent hover:bg-[#003049] hover:text-white dark:text-neutral-200 transition duration-200">
                         Contact Us
                     </button>
+
 
                 </NavbarItem>
             </NavbarContent>

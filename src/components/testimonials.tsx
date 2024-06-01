@@ -22,11 +22,10 @@ const ThreeDCardDemo: React.FC<ThreeDCardProps> = ({ content }) => {
     const [isPaused, setIsPaused] = useState(false);
 
     return (
-        <div style={{ padding: "20px 0" }}>
-            <div style={{ textAlign: 'center', backgroundColor: 'black', color: 'white', padding: '20px' }}>
-                <h1 style={{ fontSize: '3rem', fontWeight: 'bold' }}>Our success stories</h1>
-            </div>
-
+        <div style={{ padding: "20px 0", textAlign: "center" }}>
+            <h1 className="text-5xl font-bold text-gray-800 font-poppins ">Our Success Stories.</h1>
+                <p className=" text-gray-700 mt-4"
+                    style={{ fontSize: "1.2rem" }}>Discover how our dedication and expertise have transformed businesses.</p>
             <Marquee speed={100} direction="left" pauseOnHover={true}>
                 {content.map((card, index) => (
                     <div key={index} style={{ marginRight: '10px' }}>

@@ -80,12 +80,12 @@ export default function RootLayout({
           {/* <Herogemini/> */}
           <SpotlightPreview />
           <Divider className="my-6" />
-          <Slider speed={35} height={50} pauseOnHover={true} />
+          <Slider />
           <Divider className="my-6" />
           {/* <FlipWordsDemo /> */}
           <CardHoverEffectDemo/>
           <ThreeDCardDemo content={content} />
-          <BentoGridThirdDemo />
+          {/* <BentoGridThirdDemo /> */}
           {/* <StickyScrollRevealDemo /> */}
           {/* <InfiniteMovingCardsDemo /> */}
           {/* <LampDemo /> */}
