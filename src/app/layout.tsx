@@ -5,16 +5,16 @@ import Navbar from "@/components/Navbar"
 import Herogemini from "@/components/hero-gemini"
 import FlipWordsDemo from "@/components/flipwords-component"
 import StickyScrollRevealDemo from "@/components/stickyscroll"
-import  ThreeDCardDemo from "@/components/testimonials"
+import ThreeDCardDemo from "@/components/testimonials"
 import { LampDemo } from "@/components/lamp-component";
 import { SignupFormDemo } from "@/components/contact-form"
 import Footer from "@/components/Footer";
 import SpotlightPreview from "@/components/Spotlight-component"
 import { NextUIProvider } from "@nextui-org/system";
-import {Divider} from "@nextui-org/divider";
+import { Divider } from "@nextui-org/divider";
 import Slider from '../components/Slider';
-import {CardHoverEffectDemo} from "@/components/service-cards"
-import { BentoGridThirdDemo} from "@/components/blogs"
+import { CardHoverEffectDemo } from "@/components/service-cards"
+import { BentoGridThirdDemo } from "@/components/blogs"
 import AboutUs from "@/components/about-us";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -77,22 +77,23 @@ export default function RootLayout({
       <body className={inter.className}>
         <NextUIProvider>
           <Navbar />
-          {/* <Heroglobe/> */}
-          {/* <Herogemini/> */}
-          <SpotlightPreview />
+          <section id="home">
+            <SpotlightPreview />
+          </section>
           <Divider className="my-6" />
           <Slider />
           <Divider className="my-6" />
-          {/* <FlipWordsDemo /> */}
-          <CardHoverEffectDemo/>
+          <section id="services">
+            <CardHoverEffectDemo />
+          </section>
           <ThreeDCardDemo content={content} />
-          {/* <BentoGridThirdDemo /> */}
-          {/* <StickyScrollRevealDemo /> */}
-          {/* <InfiniteMovingCardsDemo /> */}
-          {/* <LampDemo /> */}
-          <AboutUs/>
+          <section id="about">
+            <AboutUs />
+          </section>
           <Divider className="my-6" />
-          <SignupFormDemo />
+          <section id="contact">
+            <SignupFormDemo />
+          </section>
           <Divider className="my-6" />
           {children}
           <Footer />

@@ -12,6 +12,7 @@ import {
     Button,
 } from "@nextui-org/react";
 import { AcmeLogo } from "./Logo";
+import { Link as ScrollLink } from 'react-scroll';
 
 import { MovingBorderDemo } from "./moving-border-button-component"
 
@@ -23,7 +24,9 @@ export default function App() {
         "Services",
         "About Us",
     ];
-
+    const scrollToTop = () => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    };
     return (
         <Navbar onMenuOpenChange={setIsMenuOpen} className="navbar-transparent">
             <NavbarContent>
@@ -39,30 +42,51 @@ export default function App() {
 
             <NavbarContent className="hidden sm:flex" justify="center">
                 <NavbarItem className="mx-5">
-                    <Link color="foreground" href="#">
-                        Home
-                    </Link>
+                <ScrollLink
+                        to="home"
+                        smooth={true}
+                        duration={500}
+                        color="primary"
+                    >
+                        home
+                    </ScrollLink>
                 </NavbarItem>
                 <NavbarItem className="mx-5">
-                    <Link color="foreground" href="#">
+                    <ScrollLink
+                        to="services"
+                        smooth={true}
+                        duration={500}
+                        color="primary"
+                    >
                         Services
-                    </Link>
+                    </ScrollLink>
                 </NavbarItem>
                 <NavbarItem className="mx-5">
-                    <Link color="foreground" href="#">
+                    <ScrollLink
+                        to="about"
+                        smooth={true}
+                        duration={500}
+                        color="primary"
+                    >
                         About Us
-                    </Link>
+                    </ScrollLink>
                 </NavbarItem>
             </NavbarContent>
 
 
+
             <NavbarContent justify="end">
                 <NavbarItem>
-                    <button className="shadow-[inset_0_0_0_2px_#003049] text-black px-6 py-2 rounded-full tracking-widest uppercase font-bold bg-transparent hover:bg-[#003049] hover:text-white dark:text-neutral-200 transition duration-200">
-                        Contact Us
-                    </button>
-
-
+                    <ScrollLink
+                        to="contact"
+                        smooth={true}
+                        duration={500}
+                        color="primary"
+                    >
+                        <button className="shadow-[inset_0_0_0_2px_#003049] text-black px-6 py-2 rounded-full tracking-widest uppercase font-bold bg-transparent hover:bg-[#003049] hover:text-white dark:text-neutral-200 transition duration-200">
+                            Contact Us
+                        </button>
+                    </ScrollLink>
                 </NavbarItem>
             </NavbarContent>
             <NavbarMenu>
