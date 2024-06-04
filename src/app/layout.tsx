@@ -82,12 +82,13 @@ export default function RootLayout({
           </section>
           <Divider className="my-6" />
           <Slider />
-          <Divider className="my-6" />
           <section id="services">
+            <Divider className="my-6" />
             <CardHoverEffectDemo />
           </section>
           <ThreeDCardDemo content={content} />
           <section id="about">
+            <Divider className="my-6" />
             <AboutUs />
           </section>
           <Divider className="my-6" />
