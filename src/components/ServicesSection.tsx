@@ -50,7 +50,7 @@ const projects: Project[] = [
     }
 ];
 
-const Card: React.FC<{ i: number, title: string, description: string, src: string, link: string, color: string, progress: any, range: number[], targetScale: number }> = ({ i, title, description, src, link, color, progress, range, targetScale }) => {
+const Card: React.FC<{ i: number, title: string, description: string, src: string, link: string, color: string, progress: any, range: number[],  }> = ({ i, title, description, src, link, color, progress, range }) => {
     const container = useRef<HTMLDivElement>(null);
     const { scrollYProgress } = useScroll({
         target: container,
@@ -58,17 +58,17 @@ const Card: React.FC<{ i: number, title: string, description: string, src: strin
     });
 
     const imageScale = useTransform(scrollYProgress, [0, 1], [2, 1]);
-    const scale = useTransform(progress, range, [1, targetScale]);
+    // const scale = useTransform(progress, range, [1, targetScale]);
 
     return (
         <div ref={container} className="h-screen flex items-center justify-center sticky top-0">
             <motion.div
-                style={{ backgroundColor: color, scale, top: `calc(-5vh + ${0}px)` }}
-                className="flex flex-col relative top-[-25%] h-[500px] w-[800px] p-[50px] border-4 border-black origin-top"
+                style={{ backgroundColor: color, top: `calc(-5vh + ${0}px)` }}
+                className="flex flex-col relative top-[-25%] max-h-[90vh] w-[90%] max-w-[1000px] p-[50px] border-4 border-black origin-top"
             >
                 <h2 className="text-center m-0 text-[28px]">{title}</h2>
                 <div className="flex h-full mt-[50px] gap-[50px]">
-                    <div className="w-[40%] relative top-[10%]">
+                    <div className="w-[100%] relative top-[10%]">
                         <p className="text-[16px] first-letter:font-title">{description}</p>
                         <span className="flex items-center gap-[5px]">
                             <a href={link} target="_blank" className="text-[12px] underline cursor-pointer">See more</a>
@@ -77,14 +77,15 @@ const Card: React.FC<{ i: number, title: string, description: string, src: strin
                             </svg>
                         </span>
                     </div>
-                    <div className="relative w-[60%] h-full rounded-[25px] overflow-hidden">
-                        <motion.div className="w-full h-full" style={{ scale: imageScale }}>
-                            <Image fill src={`/${src}`} alt="image" />
-                        </motion.div>
-                    </div>
+                    {/* <div className="relative w-[60%] h-full rounded-[25px] overflow-hidden">
+                <motion.div className="w-full h-full" style={{ scale: imageScale }}>
+                    <Image fill src={`/${src}`} alt="image" />
+                </motion.div>
+            </div> */}
                 </div>
             </motion.div>
         </div>
+
     )
 }
 
@@ -112,7 +113,7 @@ const ServicesSection: React.FC = () => {
             <div className="flex flex-wrap justify-center gap-6">
                 {
                     projects.map((project, i) => {
-                        const targetScale = 1 - ((projects.length - i) * 0.05);
+                        // const targetScale = 1 - ((projects.length - i) * 0.05);
                         return (
                             <Card
                                 key={`p_${i}`}
@@ -120,7 +121,8 @@ const ServicesSection: React.FC = () => {
                                 {...project}
                                 progress={scrollYProgress}
                                 range={[i * .25, 1]}
-                                targetScale={targetScale}
+                                
+                                // targetScale={targetScale}
                             />
                         );
                     })

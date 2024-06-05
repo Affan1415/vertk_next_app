@@ -87,20 +87,12 @@ export default function RootLayout({
 
           <section id="services">
             <Divider className="my-6" />
-            <div className="flex justify-center">
-              <div className="w-[50%] p-8">
-                <h1 className="text-3xl text-center mb-8">Unlock Your Competitive Edge with Our Service</h1>
-              </div>
-              <div className="w-[50%] p-8">
-                <div>
-                  <ServicesSection />
-                </div>
-              </div>
+            <div>
+              <h1 className="text-3xl text-center mb-8">
+                Unlock Your Competitive Edge with Our Service
+            </h1>
+              <ServicesSection />
             </div>
-
-
-
-
             {/* <CardHoverEffectDemo /> */}
           </section>
           <ThreeDCardDemo content={content} />
