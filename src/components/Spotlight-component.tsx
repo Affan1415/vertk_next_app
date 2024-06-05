@@ -32,8 +32,10 @@ const SpotlightPreview: React.FC = () => {
                 section of the page. I don&apos;t know why but I&apos;m running out of
                 copy. */}
                     </p>
+            <img src="https://assets-global.website-files.com/6533e336d16aa8c4bbed816f/6536b43687a0a124b9f65c6c_about-our-team-1.svg" alt="About Our Team" className="mt-8"></img>
                 </div>
             </div>
+
             {/* <BackgroundBeams  /> */}
         </div>
 
