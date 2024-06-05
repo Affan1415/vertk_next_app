@@ -16,6 +16,8 @@ import Slider from '../components/Slider';
 import { CardHoverEffectDemo } from "@/components/service-cards"
 import { BentoGridThirdDemo } from "@/components/blogs"
 import AboutUs from "@/components/about-us";
+import Head from 'next/head';
+import ServicesSection from '../components/ServicesSection';
 
 const inter = Inter({ subsets: ["latin"] });
 const content = [
@@ -82,9 +84,24 @@ export default function RootLayout({
           </section>
           <Divider className="my-6" />
           <Slider />
+
           <section id="services">
             <Divider className="my-6" />
-            <CardHoverEffectDemo />
+            <div className="flex justify-center">
+              <div className="w-[50%] p-8">
+                <h1 className="text-3xl text-center mb-8">Unlock Your Competitive Edge with Our Service</h1>
+              </div>
+              <div className="w-[50%] p-8">
+                <div>
+                  <ServicesSection />
+                </div>
+              </div>
+            </div>
+
+
+
+
+            {/* <CardHoverEffectDemo /> */}
           </section>
           <ThreeDCardDemo content={content} />
           <section id="about">

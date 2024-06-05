@@ -46,6 +46,7 @@ export default function App() {
                         to="home"
                         smooth={true}
                         duration={500}
+                        offset={-100}
                         color="primary"
                     >
                         home
@@ -55,6 +56,7 @@ export default function App() {
                     <ScrollLink
                         to="services"
                         smooth={true}
+                        offset={-100}
                         duration={500}
                         color="primary"
                     >
@@ -64,6 +66,7 @@ export default function App() {
                 <NavbarItem className="mx-5">
                     <ScrollLink
                         to="about"
+                        offset={-100}
                         smooth={true}
                         duration={500}
                         color="primary"
@@ -81,6 +84,7 @@ export default function App() {
                         to="contact"
                         smooth={true}
                         duration={500}
+                        offset={-100}
                         color="primary"
                     >
                         <button className="shadow-[inset_0_0_0_2px_#003049] text-black px-6 py-2 rounded-full tracking-widest uppercase font-bold bg-transparent hover:bg-[#003049] hover:text-white dark:text-neutral-200 transition duration-200">
