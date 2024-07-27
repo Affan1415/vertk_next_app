@@ -35,13 +35,17 @@ const contentArray: ContentItem[] = [
 export function ThreeDCardDemo() {
     return (
         <div className="flex flex-col items-center">
-            <h1 className="text-5xl font-bold text-[#003049] mb-4">Our Success Stories</h1>
-            <p className="text-center text-neutral-800 max-w-3xl mb-4">
-                We take pride in the achievements of our team and the success stories of our clients. 
-                Our journey is filled with inspiring moments and milestones that reflect our dedication 
-                to innovation and excellence. Here are some of the remarkable stories that showcase 
-                the impact of our work.
-            </p>
+            <div className="text-center max-w-4xl mx-auto px-4">
+                <h1 className="text-5xl font-bold text-[#003049] mb-4">
+                    Our Success Stories
+                </h1>
+                <p className="text-neutral-800 mt-4">
+                    We take pride in the achievements of our team and the success stories of our clients.
+                    Our journey is filled with inspiring moments and milestones that reflect our dedication
+                    to innovation and excellence. Here are some of the remarkable stories that showcase
+                    the impact of our work.
+                </p>
+            </div>
             <div className="flex flex-wrap justify-center">
                 {contentArray.map((item, index) => (
                     <CardContainer key={index} className="inter-var m-2">
@@ -75,7 +79,7 @@ export function ThreeDCardDemo() {
                                     alt="thumbnail"
                                 />
                             </CardItem> */}
-                            
+
                         </CardBody>
                     </CardContainer>
                 ))}
