@@ -17,7 +17,7 @@ const CalendlyInlineWidget = () => {
     }, []);
 
     return (
-        <div className="calendly-inline-widget" data-url="https://calendly.com/affanzahir26/30min?primary_color=003049" style={{ minWidth: '320px', height: '700px' }} />
+        <div className="calendly-inline-widget" data-url="https://calendly.com/vertkofficial/30min"  style={{ minWidth: '320px', height: '700px' }} />
     );
 };
 

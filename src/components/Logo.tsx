@@ -8,8 +8,8 @@ export const AcmeLogo: React.FC = () => (
         data-name="Layer 1" 
         xmlns="http://www.w3.org/2000/svg" 
         viewBox="0 0 417.88 152.47" 
-        width="100" // Set the desired width
-        height="100" // Set the desired height
+        width="75" // Set the desired width
+        height="75" // Set the desired height
     >
         <path
             fill="#003049"

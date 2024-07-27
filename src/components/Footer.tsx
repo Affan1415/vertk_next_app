@@ -22,7 +22,7 @@ const Footer: React.FC = () => {
                             <ul className="text-gray-500 dark:text-gray-400 font-medium">
                                 <li className="mb-4">
                                     <a
-                                        href="https://facebook.com/your_facebook_page"
+                                        href="https://www.facebook.com/people/Vertk/61557213636761/"
                                         className="hover:underline"
                                     >
                                         <FaFacebook className="w-5 h-5 inline mr-2 text-gray-500 dark:text-gray-400" />
@@ -31,7 +31,7 @@ const Footer: React.FC = () => {
                                 </li>
                                 <li className="mb-4">
                                     <a
-                                        href="https://linkedin.com/your_linkedin_page"
+                                        href="http://linkedin.com/company/vertk/about/?viewAsMember=true"
                                         className="hover:underline"
                                     >
                                         <FaLinkedin className="w-5 h-5 inline mr-2 text-gray-500 dark:text-gray-400" />
@@ -40,7 +40,7 @@ const Footer: React.FC = () => {
                                 </li>
                                 <li>
                                     <a
-                                        href="https://instagram.com/your_instagram_page"
+                                        href="https://www.instagram.com/vertkofficial"
                                         className="hover:underline"
                                     >
                                         <FaInstagram className="w-5 h-5 inline mr-2 text-gray-500 dark:text-gray-400" />
