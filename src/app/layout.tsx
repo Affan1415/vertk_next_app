@@ -42,7 +42,7 @@ const content = [
 ];
 
 export const metadata: Metadata = {
-  title: "Vertk - Home",
+  title: "Vertk",
   description: "Transforming Ideas Into Digital Realities",
 };
 
